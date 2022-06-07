@@ -128,11 +128,14 @@ function whereAmI(lat, lng){
   fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
     .then(response => {
       console.log(response);
+      if(response.status === 403) throw new Error('Too many requests, please wait and try again')
+      else if(!response.ok) throw new Error('Something went wrong')
       return response.json();
     })
     .then(data => {
       console.log(`You are in ${data.city}, ${data.country}`);
     })
+    .catch(err => console.log(err))
 }
 
 whereAmI(52.508, 13.381);
