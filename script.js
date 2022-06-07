@@ -178,7 +178,18 @@ wait(2).then(() =>{
     console.log('I waited one second')
 })
 
+navigator.geolocation.getCurrentPosition(
+  position => console.log(position),
+  err => console.log(err)
+);
 
+const getPosition = function() {
+  return new Promise(function(resolve, reject) {
+    navigator.geolocation.getCurrentPosition(
+      position => resolve(position),
+      err => reject(err))
+  })
+}
 
 
 
