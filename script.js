@@ -146,145 +146,37 @@ whereAmI(52.508, 13.381);
 // Test coordinates 2: 19.037, 72.873
 // Test coordinates 3: -33.933, 18.474
 
-/**
- *
- * {
- *     "statename": {},
- *     "distance": "0.000",
- *     "elevation": "39",
- *     "osmtags": {
- *         "wikipedia": "de:Berlin-Mitte",
- *         "wikidata": "Q2013767",
- *         "source": "http://wiki.openstreetmap.org/wiki/Import/Catalogue/Kreisgrenzen_Deutschland_2005",
- *         "name_de": "Mitte",
- *         "name_prefix": "Ortsteil",
- *         "ref": "0101",
- *         "place": "suburb",
- *         "name": "Mitte",
- *         "geographical_region": "Berliner Urstromtal",
- *         "name_ru": "Митте",
- *         "admin_level": "10",
- *         "boundary": "administrative",
- *         "type": "boundary"
- *     },
- *     "state": "Berlin",
- *     "latt": "52.50800",
- *     "city": "Berlin",
- *     "prov": "DE",
- *     "geocode": "BERLIN-YMXPC",
- *     "geonumber": "3058574411076",
- *     "country": "Germany",
- *     "stnumber": "5",
- *     "staddress": "Niederkirchnerstraße",
- *     "inlatt": "52.50800",
- *     "alt": {
- *         "loc": [
- *             {
- *                 "staddress": "Niederkirchnerstraße",
- *                 "stnumber": "5",
- *                 "postal": "10117",
- *                 "latt": "52.508",
- *                 "city": "Berlin",
- *                 "prov": "Berlin",
- *                 "longt": "13.381",
- *                 "class": {}
- *             },
- *             {
- *                 "staddress": "Niederkirchnerstraße",
- *                 "stnumber": "5",
- *                 "postal": "10117",
- *                 "dist": "0.000",
- *                 "latt": "52.508",
- *                 "city": "Berlin",
- *                 "prov": "Berlin",
- *                 "longt": "13.381",
- *                 "class": {}
- *             }
- *         ]
- *     },
- *     "timezone": "Europe/Berlin",
- *     "region": "Berlin",
- *     "postal": "10117",
- *     "poi": {
- *         "website": "https://www.doktor-kugler.de/",
- *         "operator": "Dr. med. Anton Kugler, Astrid Vonau",
- *         "poilon": "13.3812",
- *         "id": "8105267094",
- *         "poilat": "52.5049",
- *         "opening_hours": "Mo 08:00-16:00; Tu 08:00-13:00, 14:00-20:00; We 08:00-12:00, 14:00-19:00; Th 08:00-14:00; Fr 08:00-12:00;",
- *         "wheelchair": "yes",
- *         "name": "Zahnarztpraxis am Askanischen Platz",
- *         "addr_postcode": "10963",
- *         "addr_street": "Askanischer Platz",
- *         "phone": "+49 30 25420611",
- *         "healthcare_speciality": "general",
- *         "amenity": "doctors",
- *         "level": "0",
- *         "addr_housenumber": "1",
- *         "poidist": "0.345",
- *         "healthcare": "doctor"
- *     },
- *     "longt": "13.38100",
- *     "remaining_credits": {},
- *     "confidence": "0.9",
- *     "inlongt": "13.38100",
- *     "class": {},
- *     "adminareas": {
- *         "admin10": {
- *             "wikipedia": "de:Berlin-Mitte",
- *             "wikidata": "Q2013767",
- *             "source": "http://wiki.openstreetmap.org/wiki/Import/Catalogue/Kreisgrenzen_Deutschland_2005",
- *             "name_de": "Mitte",
- *             "name_prefix": "Ortsteil",
- *             "ref": "0101",
- *             "place": "suburb",
- *             "name": "Mitte",
- *             "geographical_region": "Berliner Urstromtal",
- *             "name_ru": "Митте",
- *             "admin_level": "10",
- *             "level": "10",
- *             "boundary": "administrative",
- *             "type": "boundary"
- *         },
- *         "admin9": {
- *             "wikipedia": "de:Bezirk Friedrichshain-Kreuzberg",
- *             "source": "http://wiki.openstreetmap.org/wiki/Import/Catalogue/Kreisgrenzen_Deutschland_2005",
- *             "postal_addr_city": "Berlin",
- *             "is_in_state_code": "BE",
- *             "website": "http://www.berlin.de/ba-friedrichshain-kreuzberg/",
- *             "is_in_region": "Berlin",
- *             "place": "borough",
- *             "geographical_region": "Berliner Urstromtal",
- *             "is_in_country_code": "DE",
- *             "postal_addr_street": "Postfach 35 07 01",
- *             "postal_addr_housename": "Bezirksamt Friedrichshain-Kreuzberg von Berlin",
- *             "name_ru": "Фридрихсхайн-Кройцберг",
- *             "boundary": "administrative",
- *             "is_in_country_prefix": "Bundesrepublik",
- *             "wikidata": "Q158893",
- *             "is_in_continent": "Europe",
- *             "is_in_county": "Berlin",
- *             "is_in_state": "Berlin",
- *             "name_prefix": "Bezirk",
- *             "ref": "02",
- *             "is_in_city": "Berlin",
- *             "postal_addr_note": "Angabe von \"Bürgeramt x\" (1,2,3) für gezielte Anschrift möglich.",
- *             "name": "Friedrichshain-Kreuzberg",
- *             "postal_addr_postcode": "10216",
- *             "description": "2. Verwaltungsbezirk von Berlin",
- *             "is_in_country": "Deutschland",
- *             "admin_level": "9",
- *             "level": "9",
- *             "postal_addr_country": "DE",
- *             "type": "boundary"
- *         }
- *     },
- *     "altgeocode": "ERPLATZ-YMXPC"
- * }
- */
+// new promise
+// the executor function is the async behavior
+const lotteryPromise = new Promise(function(resolve, reject) {
 
+  console.log('Lottery draw is happening');
+  setTimeout(function() {
+    if(Math.random() >= 0.5){
+      resolve('You WIN')
+    } else {
+      reject(new Error('You lost your money'));
+    }
+  }, 2000)
 
+});
 
+lotteryPromise.then(res => console.log(res))
+  .catch(err => console.error(err));
+
+// Promisifying set timeout
+const wait = function(seconds) {
+  return new Promise(function(resolve) {
+    setTimeout(resolve, seconds * 1000)
+  })
+}
+
+wait(2).then(() =>{
+  console.log('I waited two seconds');
+  return wait(1);
+  }).then(() => {
+    console.log('I waited one second')
+})
 
 
 
