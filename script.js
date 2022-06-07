@@ -191,7 +191,19 @@ const getPosition = function() {
   })
 }
 
+const createImage = function(imgPath) {
+  return new Promise(function(resolve, reject) {
+    const img = document.createElement('img');
+    img.src = imgPath;
+    img.classList.add('images');
+    document.querySelector('.container').appendChild(img);
+    resolve(img);
+  })
+}
 
+createImage('img/img-1.jpg').then((img) => {
+  if(!img) return new Error('Image failed to load')
+})
 
 
 
