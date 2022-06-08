@@ -224,6 +224,21 @@ const whereAmIAsync = async function() {
 whereAmIAsync();
 console.log('this should display before the async function');
 
+const get3countries = async function(c1, c2, c3){
+  try{
+
+    for(let i = 1; i < 4; i++){
+      const data = await getJSON(`https://restcountries.com/v2/name/${c1}`)
+      const [data2] = await getJSON(`https://restcountries.com/v2/name/${c2}`)
+      const [data3] = await getJSON(`https://restcountries.com/v2/name/${c3}`)
+    }
+
+    console.log([])
+  } catch(err) {
+    console.log(err);
+  }
+}
+
 
 
 
