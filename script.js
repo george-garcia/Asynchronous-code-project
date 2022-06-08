@@ -191,21 +191,38 @@ const getPosition = function() {
   })
 }
 
-const createImage = function(imgPath) {
+let img = '';
+const imgPath1 = 'img/img-1.jpg';
+const imgPath2 = 'img/img-2.jpg';
+const imgPath3 = 'img/img-3.jpg';
+
+const createImage = function(imgPath1) {
   return new Promise(function(resolve, reject) {
-    const img = document.createElement('img');
-    img.src = imgPath;
+    img = document.createElement('img');
+    img.src = imgPath1;
     img.classList.add('images');
-    document.querySelector('.container').appendChild(img);
+    document.querySelector('.container').append(img);
     resolve(img);
   })
 }
 
-createImage('img/img-1.jpg').then((img) => {
+createImage(imgPath1).then((img) => {
   if(!img) return new Error('Image failed to load')
 })
 
+wait(2).then(() => {
+  img.style.display = 'none';
+}).then(() => wait(2)).then(() => {
+  img.src = imgPath2;
+  img.style.display = 'inline';
+})
 
+const whereAmIAsync = async function() {
+  const res = await console.log('This is an async function');
+  console.log('res');
+}
+whereAmIAsync();
+console.log('this should display before the async function');
 
 
 
