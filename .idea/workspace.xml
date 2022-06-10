@@ -38,11 +38,23 @@
       <updated>1654534445170</updated>
       <workItem from="1654534446471" duration="15401000" />
       <workItem from="1654605556965" duration="18021000" />
-      <workItem from="1654794745060" duration="596000" />
+      <workItem from="1654794745060" duration="1192000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/script.js</url>
+          <line>232</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
